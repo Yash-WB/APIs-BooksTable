@@ -1,0 +1,21 @@
+@DemoProject.API_HostAddress = http://localhost:5123
+
+GET {{DemoProject.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{DemoProject.API_HostAddress}}/api/book
+Content-Type: application/json
+
+{
+  "Name": "xyzz",
+  "Description" : "sbhasjadsada",
+  "Author": "abc"
+}
+
+###
+
+GET {{DemoProject.API_HostAddress}}/api/book
+
+###

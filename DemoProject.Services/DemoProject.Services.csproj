@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DemoProject.IRepository\DemoProject.IRepositories.csproj" />
+    <ProjectReference Include="..\DemoProject.IServices\DemoProject.IServices.csproj" />
+    <ProjectReference Include="..\DemoProject.Model\DemoProject.Model.csproj" />
+  </ItemGroup>
+
+</Project>
