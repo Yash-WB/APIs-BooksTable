@@ -1,4 +1,5 @@
-﻿using DemoProject.IServices;
+﻿using DemoProject.DTO;
+using DemoProject.IServices;
 using DemoProject.Model;
 using DemoProject.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -20,14 +21,14 @@ namespace DemoProject.API.Controllers
 
         // GET: api/<BookController>
         [HttpGet]
-        public async Task <IEnumerable<Book>> Get()
+        public async Task <IEnumerable<GetBookDto>> Get()
         {
             return await _bookService.GetAllBooksAsync();
         }
 
         // GET api/<BookController>/5
         [HttpGet("{id}")]
-        public async Task<Book> Get(int id)
+        public async Task<GetBookDto> Get(int id)
         {
 
             try
@@ -45,16 +46,16 @@ namespace DemoProject.API.Controllers
 
         // POST api/<BookController>
         [HttpPost]
-        public async Task<Book> Post([FromBody] Book book)
+        public async Task<GetBookDto> Post([FromBody] CreateBookDto bookDto)
         {
-            return await _bookService.CreateBookAsync(book);
+            return await _bookService.CreateBookAsync(bookDto);
         }
 
         // PUT api/<BookController>/5
         [HttpPut("{id}")]
-        public async Task<Book> Put(int id, [FromBody] Book book)
+        public async Task<GetBookDto> Put(int id, [FromBody] UpdateBookDto bookDto)
         {
-            return await _bookService.UpdateBookAsync(id, book);
+            return await _bookService.UpdateBookAsync(id, bookDto);
         }
 
         // DELETE api/<BookController>/5
